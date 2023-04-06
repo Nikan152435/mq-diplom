@@ -653,31 +653,41 @@
         <form class="sign-up__form">
           <div class="sign-up__row">
             <div class="sign-up__column">
-              <label for="" class="sign-up__label" for="visited">
-                как часто вы заходите на сайт?
-              </label>
-              <div>
-              <input id="visited" class="sign-up__field sign-up__field_visited" placeholder="Почти каждый день" name="visited" required> 
+              <span for="" class="sign-up__label" for="visited">
+                Как часто вы заходите на сайт?
+              <select id="visited" class="sign-up__field sign-up__field_visited"  name="visited" required>
+                <option value="default" selected><p>Почти каждый день</p></option>
+                <option value="one_answer"><p class="one-answer">Раз в несколько дней</p></option>
+                <option value="two_answer"><p class="one-answer">Раз в несколько недель</p></option>
+                <option value="tree_answer"><p class="one-answer">Несколько раз в год</p></option>
+              </select> 
+            </span>
             </div>
             </div>
 
               <div class="sign-up__column">
                 <div class="email__title">
-                <span >вы подписаны на email рассылку?</span>
+                <span >Вы подписаны на email рассылку?</span>
                 </div>
                 <div>
-                <input id="email" class="sign-up__field sign-up__field_email" type="radio" name="email" required> 
-                <input id="email" class="sign-up__field sign-up__field_email" type="radio" name="email" required> 
+                  <label class="radio-group sign-up__field_email">
+                    <input type="radio" class="radio" name="radio">
+                    <span class="radio-text">Да</span>
+                  </label>
+                  <label class="radio-group sign-up__field_email">
+                    <input type="radio" class="radio" name="radio">
+                    <span class="radio-text">Нет</span>
+                  </label>
                 </div>
                 </div> 
 
-              <div class="sign-up__column">
+              <div class="sign-up__column recipe">
                 <form>
                   <div>
-                  <textarea placeholder = "Может, больше рецептов?" rows="10" cols="40"></textarea>
+                  <textarea class="textarea" placeholder = "Может, больше рецептов?" rows="10" cols="40"></textarea>
                   </div>
-                  <div>
-                  <input type = "submit" name = "submitInfo" value = "отправить">
+                  <div class="submit">
+                  <input class="button-submit" type = "submit" name = "submitInfo" value = "отправить">
                   </div>
                 </form>
 
@@ -689,6 +699,7 @@
     </div>
   </div>
  </div>
+
        
 </body>
 </html>
