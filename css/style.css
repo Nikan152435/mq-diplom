@@ -520,7 +520,7 @@ button {
 }
 /*-------------goods images-------------*/
 .goods-one {
-  background-image: url("/img/shop-item-desk1.jpg");
+  background-image: url("img/shop-item-desk1.jpg");
   background-repeat: no-repeat;
   background-position: top center;
   padding-top: 235px;
@@ -531,14 +531,14 @@ button {
 }
 
 .goods-two {
-  background-image: url("/img/shop-item-desk2.jpg");
+  background-image: url("img/shop-item-desk2.jpg");
   background-repeat: no-repeat;
   background-position: top center;
   padding-top: 235px;
 }
 
 .goods-three {
-  background-image: url("/img/shop-item-desk3.jpg");
+  background-image: url("img/shop-item-desk3.jpg");
   background-repeat: no-repeat;
   background-position: top center;
   padding-top: 235px;
