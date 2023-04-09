@@ -358,6 +358,10 @@ button {
   background-position: center;
   background-color: #b59f5b;
 }
+.search-button:hover {
+  background-color: #434543;
+  opacity: 0.6;
+}
 /*-------------search :focus mask-------------*/
 
 .search-field:focus {
@@ -385,6 +389,10 @@ button {
   text-transform: uppercase;
   color: #ffffff;
   font-size: 14px;
+}
+.mail-button:hover {
+  background-color: #434543;
+  opacity: 0.6;
 }
 .top-mail {
   text-align: center;
@@ -486,6 +494,8 @@ button {
   max-width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
+  margin-left: 110px;
+ 
 }
 
 .wrapper-bottom {
@@ -507,6 +517,31 @@ button {
   margin-right: auto;
   max-width: 100%;
   display: block;
+}
+/*-------------goods images-------------*/
+.goods-one {
+  background-image: url("../images/shop-item-desk1.jpg");
+  background-repeat: no-repeat;
+  background-position: top center;
+  padding-top: 235px;
+}
+
+.goods-one, .goods-two {
+  margin-right: 66px;
+}
+
+.goods-two {
+  background-image: url("../images/shop-item-desk2.jpg");
+  background-repeat: no-repeat;
+  background-position: top center;
+  padding-top: 235px;
+}
+
+.goods-three {
+  background-image: url("../images/shop-item-desk3.jpg");
+  background-repeat: no-repeat;
+  background-position: top center;
+  padding-top: 235px;
 }
 
 .goods-one {
@@ -571,7 +606,10 @@ button {
     margin-top: 15px;
     margin-bottom: 25px
   }
-
+  .button-buy:hover {
+    background-color: #434543;
+    opacity: 0.6;
+  }
 
 /*-------------footer-------------*/
 .footer {
@@ -774,9 +812,10 @@ border: 2px solid #b59f5b;
 }
 
 .button-submit:hover {
-  background-color: #98e47a;
+  background-color: #434543;
   opacity: 0.6;
 }
+
 
 /*-------------popup close----------*/
 
@@ -1136,15 +1175,17 @@ border: 2px solid #b59f5b;
   
   .goods-item {
     max-width: 100vw;
+    width: 361px;
   }
   
-  .wrapper-bottom, .goods-item {
+  .wrapper-bottom {
+    display: flex;
+    justify-content: space-between;
     width: 361px;
   }
   
   .content-bottom {
-    display: flex;
-    flex-wrap: wrap;
+    
     width: 361px;
   }
   
