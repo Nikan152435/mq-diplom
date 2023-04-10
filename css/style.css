@@ -25,7 +25,7 @@ body {
   font-family: "Open-Sans-Regular";
   font-style: normal;
   font-weight: 400;
-  src: url("https://netology-code.github.io/html-2-diploma/sources/fonts/OpenSans-Regular.woff");
+  src: url("fonts/OpenSans-Regular.woff");
 
   font-display: swap;
 }
@@ -33,7 +33,7 @@ body {
   font-family: "Open-Sans-Bold";
   font-style: normal;
   font-weight: 700;
-  src: url("https://netology-code.github.io/html-2-diploma/sources/fonts/OpenSans-Bold.woff");
+  src: url("fonts/OpenSans-Bold.woff");
 
   font-display: swap;
 }
@@ -56,7 +56,7 @@ button {
 .header {
   min-width: 1600px;
   min-height: 450px;
-  background-image: url("https://netology-code.github.io/html-2-diploma/sources/images/banner-bg.jpg");
+  background-image: url("../images/banner-bg.jpg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -352,12 +352,13 @@ button {
 .search-button {
   border: none;
   width: 49px;
-  background-image: url("https://netology-code.github.io/html-2-diploma/sources/images/search.svg");
+  background-image: url("../svg/search.svg");
   background-repeat: no-repeat;
   background-size: 18px;
   background-position: center;
   background-color: #b59f5b;
 }
+
 .search-button:hover {
   background-color: #434543;
   opacity: 0.6;
@@ -640,14 +641,14 @@ button {
   padding: 30px;
 }
 .social-icon_dribbble {
-  background-image: url(https://netology-code.github.io/html-2-diploma/sources/images/social/001-dribbble.svg);
+  background-image: url("../svg/001-dribbble.svg");
 }
 .social-icon_pinterest {
-  background-image: url("https://netology-code.github.io/html-2-diploma/sources/images/social/002-pinterest.svg");
+  background-image: url("../svg/002-pinterest.svg");
 }
 
 .social-icon_tumblr {
-  background-image: url("https://netology-code.github.io/html-2-diploma/sources/images/social/003-tumblr.svg");
+  background-image: url("../svg/003-tumblr.svg");
 }
 /*-------------copyright ©-------------*/
 .copyright {
@@ -663,17 +664,33 @@ button {
 
 /*--------------------------Popup form-------------------------------*/
 
+.popup {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+.popup::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #000000;
+  opacity: 0.6;
+  z-index: -1;
+}
 .popup__container {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 0 30px;
+  position: absolute;
+  z-index: 1;
 }
-
 .sign-up {
   width: 390px;
 }
-
 .sign-up__header {
   display: flex;
   justify-content: center;
@@ -684,7 +701,6 @@ button {
   text-transform: uppercase;
   color: #0f0d0e;
 }
-
 /*-------------visited popup----------*/
 
 .sign-up__label {
@@ -693,37 +709,32 @@ button {
   line-height: 40px;
   color: #000;
   margin-bottom: 12px;
-  
 }
-
 .sign-up__field_visited {
   margin-bottom: 36px;
   width: 330px;
   height: 45px;
   appearance: none;
-  background-image: url("/svg/form-arrows.svg");
+  -moz-appearance: none;
+  background-image: url("../svg/form-arrows.svg");
   background-repeat: no-repeat;
   background-position: right 5px center;
   background-size: 14px 25px;
   padding-left: 20px;
   border: none;
-  font-weight: 300;
-  outline: none;
+  font-weight: 600;
+}
+select.sign-up__field_visited {
   background-color: #f4f7f6;
-  border: 2px solid #f4f7f6;
-  width: 330px;
-  height: 45px;
 }
 
 .sign-up__field_visited:focus {
-  border: 2px solid #b59f5b;
-  }
-
-.one-answer {
+  outline-color: #6f5c21;
+}
+option.one-answer {
   font-family: Open-Sans-r, sans-serif;
   font-size: 13px;
 }
-
 /*-------------email popup----------*/
 
 .email__title {
@@ -732,72 +743,54 @@ button {
   color: #000;
   margin-bottom: 12px;
 }
-
 .sign-up__field_email {
   margin-right: 16px;
 }
-
 .radio-text {
   display: inline-block;
-  
-  
 }
-
 .radio-text::before {
   margin-right: 8px;
 }
-
 .radio:focus ~ .radio-text::before {
   outline: 1px solid #72612b;
   outline-offset: 2px;
 }
-
 .radio-text::before {
   content: "";
   display: inline-block;
   vertical-align: middle;
   width: 20px;
   height: 20px;
-  background-image: url("/svg/form-empty-circle.svg");
+  background-image: url("../svg/form-empty-circle.svg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 20px;
 }
-
 .radio:checked ~ .radio-text::before {
-  background-image: url("/svg/form-circle.svg");
+  background-image: url("../svg/form-circle.svg");
 }
-
 .radio {
   position: absolute;
   clip: rect(1px 1px 1px 1px);
   width: 1px;
   height: 1px;
- 
 }
-
 /*-------------recipe popup----------*/
 
 .textarea {
   padding-left: 20px;
   padding-top: 20px;
   background-color: #f4f7f6;
-  border: 2px solid #f4f7f6;
 }
-.textarea:focus {
-border: 2px solid #b59f5b;
-}
-
 .recipe {
   width: 330px;
   height: 50px;
   margin-top: 30px;
 }
-
 .submit {
   margin-top: 28px;
 }
-
 /*-------------button submit popup----------*/
 
 .button-submit {
@@ -810,32 +803,26 @@ border: 2px solid #b59f5b;
   height: 50px;
   border: none;
 }
-
 .button-submit:hover {
   background-color: #434543;
   opacity: 0.6;
 }
 
-
 /*-------------popup close----------*/
 
 .popup__close {
-  width: 1.4em;
-  height: 1em;
+  width: 20px;
+  height: 20px;
   position: absolute;
-  top: -1.5em;
-  right: 0;
+  top: -10%;
+  right: 20%;
+  background-image: url("../svg/form-x.svg");
+  background-repeat: no-repeat;
+  background-size: 20px;
+  border: none;
 }
 
-.popup__close:before,
-.popup__close:after {
-  width: 7em;
-  height: 1em;
-  font-size: 4px;
-}
-.sign-up__column {
-  margin-bottom: 40px;
-}
+
 
 /*-------------media request max-width 1200px landscape----------*/
 
